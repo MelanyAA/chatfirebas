@@ -1,0 +1,23 @@
+<h3>Chat</h3>
+<hr>
+<div class="app-mensajes" id="app-mensajes">
+
+    <div class="text-end" *ngFor="let chat of service.chats">
+        <span class="badge bg-warning">Meyling</span>
+        <p style="color:#8A0597;">{{chat.mensaje}}</p>
+    </div>
+
+    <!-- <div class="text-end">
+        <span class="badge bg-success">Meyling</span>
+        <p style="color:#8A0597;">Esta es una prueba</p>
+    </div>
+
+    <div>
+        <span class="badge bg-dark">Yo</span>
+        <p style="color:blue">como vas creer</p>
+    </div> -->
+
+</div>
+<div class="form-group">
+    <input class="form-control" type="text" name="mensaje" [(ngModel)]="mensaje" placeholder="Escriba aqui!!" (keyup.enter)="sendchat()">
+</div>

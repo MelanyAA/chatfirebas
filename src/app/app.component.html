@@ -1,0 +1,20 @@
+<!-- <p> chats</p>
+<ul>
+    <li class="text" *ngFor="let chat of chats | async ">
+        {{chat.mensaje}}
+    </li>
+</ul> -->
+
+<div class="container main-container">
+    <!-- <div class="chat-window">
+        <app-chats></app-chats>
+    </div> -->
+    <div class="col-cmd-12 text-end" *ngIf="services.usuario.uid">
+        <button class="btn btn-outline-danger" (click)="services.logout()"><img src="../assets/loguot.png"
+                style="width: 25px;">Salir</button>
+    </div>
+
+    <div *ngIf="!services.usuario.uid">
+        <app-loging></app-loging>
+    </div>
+</div>
